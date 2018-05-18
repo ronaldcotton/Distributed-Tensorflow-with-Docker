@@ -1,0 +1,2 @@
+source .\.setids
+make build
