@@ -97,8 +97,6 @@ SEED = 66478
 def main(unused_argv):
   mnist = input_data.read_data_sets(FLAGS.data_dir, one_hot=True, seed=SEED)
 
-  startingCSVFile()
-
   if FLAGS.download_only:
     sys.exit(0)
 
@@ -110,6 +108,8 @@ def main(unused_argv):
   print("job name = %s" % FLAGS.job_name)
   print("task index = %d" % FLAGS.task_index)
 
+  if FLAGS.job_name == 'worker':
+      filename = startingCSVFile()
   #Construct the cluster and start the server
   ps_spec = FLAGS.ps_hosts.split(",")
   worker_spec = FLAGS.worker_hosts.split(",")
