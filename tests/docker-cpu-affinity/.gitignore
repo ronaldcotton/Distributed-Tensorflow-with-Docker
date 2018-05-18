@@ -1,3 +1,4 @@
 ./start.sh
 ./stop.sh
 ./*.pyc
+./*.csv
