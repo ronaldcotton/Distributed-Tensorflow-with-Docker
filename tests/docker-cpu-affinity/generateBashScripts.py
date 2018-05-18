@@ -35,10 +35,6 @@ def main():
   # output the bash tag at the start
   f.write("#!/bin/bash\n\n")
 
-  # make directory for opt - and copy dist file to $PATH/opt
-  f.write("mkdir {}/opt\n".format(cwd))
-  f.write("cp {}/dist.py {}/opt\n\n".format(cwd, cwd))
-
   # make ip string & ip command
   f.write("ip='{}.10'\n".format(FLAGS.ip))
   f.write("ip_cmd='--net tfdocker --ip {}.10'\n".format(FLAGS.ip))
@@ -133,8 +129,8 @@ def main():
 
 
 def parseCommandArgs():
-  """Take arguments from the command line to modify aspects of runtime
-
+  """
+  Take arguments from the command line to modify aspects of runtime
   arguments have defaults
 
   Args:
