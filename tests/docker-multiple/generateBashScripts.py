@@ -104,9 +104,10 @@ def main():
   f.write('for f in opt/*.csv; do tail -n +2 "$f" >> opt/temp.csv; done\n')
   f.write('echo "$(head -n 1 opt/0*.csv)\n$(sort -t \',\' -k 3 -g opt/temp.csv)" > ps{}workers{}.csv\n'.format(FLAGS.ps, FLAGS.workers))
   f.write("rm -f opt/*.csv\n")
-  
+
   # close file
   f.close()
+  os.chmod(FLAGS.filename_end, 0755)
 
 def parseCommandArgs():
   """Take arguments from the command line to modify aspects of runtime
