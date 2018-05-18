@@ -50,7 +50,7 @@ import csv
 filetimestamp = datetime.now()
 
 flags = tf.app.flags
-flags.DEFINE_string("data_dir", "/tmp/mnist-data",
+flags.DEFINE_string("data_dir", "/opt/MNIST-data",
                     "Directory for storing mnist data")
 flags.DEFINE_boolean("download_only", False,
                      "Only perform downloading of data; Do not proceed to "
@@ -387,6 +387,6 @@ def setAffinity(CPUArray):
     CPUA = list(CPUArray)
   psutil.Process().cpu_affinity(CPUA)
 
-  
+
 if __name__ == "__main__":
   tf.app.run()
