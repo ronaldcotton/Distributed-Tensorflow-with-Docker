@@ -156,7 +156,7 @@ def parseCommandArgs():
                       help='number of gpu')
   parser.add_argument('--batch_size', type=int, default=64,
                       help='size of batches')
-  parser.add_argument('--train_steps', type=int, default=20000,
+  parser.add_argument('--train_steps', type=int, default=10000,
                       help='number of training steps')
   parser.add_argument('--mem_percent', type=float, default=0.90,
                       help='memory usage for each instance from free memory')

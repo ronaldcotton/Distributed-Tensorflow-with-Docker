@@ -70,7 +70,7 @@ flags.DEFINE_integer("hidden_units", 100,
                      "Number of units in the hidden layer of the NN")
 flags.DEFINE_integer("capture_steps", 10,
                      "capture data every x steps")
-flags.DEFINE_integer("train_steps", 2000,
+flags.DEFINE_integer("train_steps", 10000,
                      "Number of (global) training steps to perform")
 flags.DEFINE_integer("batch_size", 100, "Training batch size")
 flags.DEFINE_float("learning_rate", 0.01, "Learning rate")
@@ -288,7 +288,7 @@ def main(unused_argv):
       if len(losses) == avg_loss_sz:
         losses.pop(0)
       losses.append(loss_val)
-      
+
       if local_step % FLAGS.capture_steps == 0:
         timestamp = str(datetime.fromtimestamp(int(now)).strftime('%Y-%m-%d %H:%M:%S'))
         ms = str(now - int(now))[1:7]

@@ -1,9 +1,10 @@
 
 ## bench.py ##
 -----------------
-### _Requires:_ sysbench, python 3.x, pip 9.0.1+ (pip -V) ###
-outputs machine info and runs sysbench CPU and FileIO benchmark for
-determining baseline performance on system.
+*Use sysbench 0.4.12 for this software to work properly, newer versions use
+different parameters*
+Outputs machine info and runs sysbench CPU and FileIO benchmark for
+determining baseline performance on system.  Benchmark data can be doun
 
 ### upgrade pip ###
 
@@ -24,4 +25,3 @@ sudo apt-get install sysbench
 http://imysql.com/wp-content/uploads/2014/10/sysbench-manual.pdf
 https://anothermysqldba.blogspot.com/2013/05/benchmarking-mysql-cpu-file-io-memory.html
 http://blog.siphos.be/2013/04/comparing-performance-with-sysbench-part-2/
-
