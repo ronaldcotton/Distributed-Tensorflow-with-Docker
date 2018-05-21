@@ -273,7 +273,6 @@ def main(unused_argv):
     local_step = 0
     losses = []
     avg_loss_sz = FLAGS.capture_steps
-    loss_th = 0.3
     lasttime = 0
 
     while True:
@@ -289,6 +288,7 @@ def main(unused_argv):
       if len(losses) == avg_loss_sz:
         losses.pop(0)
       losses.append(loss_val)
+      
       if local_step % FLAGS.capture_steps == 0:
         timestamp = str(datetime.fromtimestamp(int(now)).strftime('%Y-%m-%d %H:%M:%S'))
         ms = str(now - int(now))[1:7]
