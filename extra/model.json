@@ -1,0 +1,18 @@
+{
+        "version": "1",
+        "model": "cifar10",
+        "input_nodes": 1024,
+        "output_nodes": 10,
+        "load_model": true,
+        "save_model": true,
+        "iterations": 1,
+        "epochs": 1,
+        "batch_size": 64,
+        "learning_rate": 0.2,
+        "layers": [
+            {"type":"dense", "activation":"relu6", "nodes": "40", "bias":true },
+            {"type":"dense", "activation":"relu", "nodes": "20", "bias":true },
+            {"type":"output", "activation":"softmax", "loss": "softmax_categorical_crossentropy"}
+        ],
+        "end_print":"test" 
+}

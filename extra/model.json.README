@@ -1,0 +1,10 @@
+model.json.txt
+
+# types: https://github.com/tflearn/tflearn/blob/master/tflearn/activations.py
+activations: linear, tanh, sigmoid, softmax, softplus, softsign, relu, relu6,
+    leakyrelu, prelu, elu, crelu
+
+# types: https://github.com/tflearn/tflearn/blob/master/tflearn/objectives.py
+regression loss: categorical_crossentropy, weighted_crossentropy,
+    softmax_categorical_crossentropy, binary_crossentropy, mean_square,
+    hinge_loss, roc_auc_score, weak_cross_entropy_2d

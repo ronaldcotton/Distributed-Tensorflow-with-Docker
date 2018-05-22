@@ -13,6 +13,7 @@
 # limitations under the License.
 # ==============================================================================
 
+
 """Distributed MNIST training and validation, with model replicas.
 A simple softmax model with one hidden layer is defined. The parameters
 (weights and biases) are located on one parameter server (ps), while the ops
@@ -30,6 +31,8 @@ perform forward computation and gradient calculation in parallel, which
 should lead to increased training speed for the simple model.
 """
 
+# this code is based from a modified version of mnist_replica.py
+# https://github.com/tensorflow/tensorflow/blob/master/tensorflow/tools/dist_test/python/mnist_replica.py
 
 from __future__ import absolute_import
 from __future__ import division
